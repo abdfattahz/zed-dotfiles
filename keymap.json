@@ -1,0 +1,87 @@
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "space ,": "tab_switcher::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "space s h": "pane::SplitRight",
+      "space s v": "pane::SplitDown",
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "space c s": "outline::Toggle",
+      "space b d": "pane::CloseActiveItem",
+      "space b o": ["pane::CloseOtherItems", { "close_pinned": false }],
+      "space space": "file_finder::Toggle",
+      "space g d": "editor::GoToDefinition",
+      "space g r": "editor::FindAllReferences",
+      "space g i": "editor::GoToImplementation",
+      "space s g": "pane::DeploySearch",
+      "space g g": "git_panel::ToggleFocus",
+      "space d a": "debugger::Start",
+      "space d t": "debugger::Stop",
+      "space d o": "debugger::StepOver",
+      "space d b": "editor::ToggleBreakpoint",
+      "space d e": "debug_panel::ToggleFocus",
+      "space d c": "debugger::Continue",
+      "ctrl-shift-k": "editor::Hover",
+      "shift-k": "editor::Hover",
+      "ctrl-n": ["editor::SelectNext", { "replace_newest": false }]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual_line",
+    "bindings": {
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "r": "project_panel::Rename",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "x": "project_panel::Cut",
+      "d": ["project_panel::Trash", { "skip_prompt": false }],
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "s": "project_panel::Open",
+      "shift-s": "pane::SplitDown",
+      "enter": "project_panel::Open",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-o": "workspace::Open",
+      "ctrl-`": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "ctrl-n": ["editor::SelectNext", { "replace_newest": false }],
+      "sa": ["workspace::SendKeystrokes", "y s"]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operator)",
+    "bindings": {
+      "sa": ["workspace::SendKeystrokes", "s a"],
+      "sd": ["workspace::SendKeystrokes", "d s"],
+      "sr": ["workspace::SendKeystrokes", "c s"]
+    }
+  }
+]
