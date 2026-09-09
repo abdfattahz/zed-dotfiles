@@ -52,7 +52,8 @@
       "s": "project_panel::Open",
       "shift-s": "pane::SplitDown",
       "enter": "project_panel::Open",
-      "space e": "workspace::ToggleLeftDock"
+      "space e": "workspace::ToggleLeftDock",
+      "ctrl-l": "project_panel::ToggleFocus"
     }
   },
   {
